@@ -39,14 +39,88 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="9Ic-4l-G6O" id="zio-w1-hBm"/>
+                        <segue destination="Ynk-QH-04O" kind="show" identifier="movieDetails" id="OCA-vR-Qcr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="114"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0oc-2O-OyO">
+            <objects>
+                <viewController id="Ynk-QH-04O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="82R-Mi-HYV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCd-bE-Wlz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCa-bB-diS">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="589.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="babyboss" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-LU-jzi">
+                                                <rect key="frame" x="48" y="48" width="318" height="493.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="JLD-LU-jzi" firstAttribute="leading" secondItem="hCa-bB-diS" secondAttribute="leading" constant="48" id="HRZ-Ke-jfz"/>
+                                            <constraint firstItem="JLD-LU-jzi" firstAttribute="top" secondItem="hCa-bB-diS" secondAttribute="top" constant="48" id="b0R-Da-xoc"/>
+                                            <constraint firstAttribute="bottom" secondItem="JLD-LU-jzi" secondAttribute="bottom" constant="48" id="rXd-5Z-i2P"/>
+                                            <constraint firstAttribute="trailing" secondItem="JLD-LU-jzi" secondAttribute="trailing" constant="48" id="x6e-wa-pJx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGF-GN-Ifs">
+                                        <rect key="frame" x="48" y="565.5" width="318" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sh-lU-qug">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="35"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7Sh-lU-qug" secondAttribute="trailing" id="24a-TU-MOi"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Sh-lU-qug" secondAttribute="bottom" id="TjP-cR-uzF"/>
+                                            <constraint firstItem="7Sh-lU-qug" firstAttribute="top" secondItem="zGF-GN-Ifs" secondAttribute="top" id="ULO-Hv-tte"/>
+                                            <constraint firstItem="7Sh-lU-qug" firstAttribute="leading" secondItem="zGF-GN-Ifs" secondAttribute="leading" id="js5-Mb-BMp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="hCa-bB-diS" firstAttribute="top" secondItem="cCd-bE-Wlz" secondAttribute="top" id="9Bi-8n-n8U"/>
+                                    <constraint firstItem="hCa-bB-diS" firstAttribute="centerX" secondItem="cCd-bE-Wlz" secondAttribute="centerX" id="MZ2-cT-sFr"/>
+                                    <constraint firstAttribute="trailing" secondItem="zGF-GN-Ifs" secondAttribute="trailing" constant="48" id="dlR-0I-flX"/>
+                                    <constraint firstItem="zGF-GN-Ifs" firstAttribute="top" secondItem="hCa-bB-diS" secondAttribute="bottom" constant="-24" id="fdb-zn-Jgl"/>
+                                    <constraint firstItem="hCa-bB-diS" firstAttribute="width" secondItem="cCd-bE-Wlz" secondAttribute="width" id="rk8-Pu-oDN"/>
+                                    <constraint firstItem="zGF-GN-Ifs" firstAttribute="leading" secondItem="cCd-bE-Wlz" secondAttribute="leading" constant="48" id="x14-pk-PBQ"/>
+                                    <constraint firstItem="hCa-bB-diS" firstAttribute="height" secondItem="cCd-bE-Wlz" secondAttribute="height" multiplier="0.7" id="xjO-2H-uU2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cCd-bE-Wlz" secondAttribute="bottom" id="DFB-io-Tdz"/>
+                            <constraint firstItem="IRh-Gy-jfG" firstAttribute="trailing" secondItem="cCd-bE-Wlz" secondAttribute="trailing" id="LN0-Ws-eLB"/>
+                            <constraint firstAttribute="top" secondItem="cCd-bE-Wlz" secondAttribute="top" id="c1Q-tt-vGJ"/>
+                            <constraint firstItem="cCd-bE-Wlz" firstAttribute="leading" secondItem="IRh-Gy-jfG" secondAttribute="leading" id="zkj-jF-GjO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IRh-Gy-jfG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2ZD-ph-HWe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMh-qy-mb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="117"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="babyboss" width="803" height="997"/>
         <image name="wavesbg" width="1080" height="1920"/>
     </resources>
 </document>
