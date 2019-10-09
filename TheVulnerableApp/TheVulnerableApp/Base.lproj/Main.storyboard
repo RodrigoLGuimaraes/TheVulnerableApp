@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wavesbg" translatesAutoresizingMaskIntoConstraints="NO" id="d0b-Gn-8gY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Ic-4l-G6O">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -24,7 +27,11 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9Ic-4l-G6O" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kpg-GX-S2d"/>
+                            <constraint firstItem="d0b-Gn-8gY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LwL-s2-FW7"/>
+                            <constraint firstAttribute="bottom" secondItem="d0b-Gn-8gY" secondAttribute="bottom" id="TaU-9q-Cbz"/>
+                            <constraint firstAttribute="trailing" secondItem="d0b-Gn-8gY" secondAttribute="trailing" id="UGJ-EQ-I6E"/>
                             <constraint firstItem="9Ic-4l-G6O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zox-gn-dWL"/>
+                            <constraint firstItem="d0b-Gn-8gY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gh7-Eo-Z4R"/>
                             <constraint firstAttribute="bottom" secondItem="9Ic-4l-G6O" secondAttribute="bottom" id="jQS-uz-Igg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Ic-4l-G6O" secondAttribute="trailing" id="kym-u2-sMC"/>
                         </constraints>
@@ -39,4 +46,7 @@
             <point key="canvasLocation" x="139" y="114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wavesbg" width="1080" height="1920"/>
+    </resources>
 </document>
