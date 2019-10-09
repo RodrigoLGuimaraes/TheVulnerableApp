@@ -30,4 +30,11 @@ class MovieTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func setRandomImage() {
+        let image = MovieImageProvider.shared.getRandomImage()
+        
+        self.movieImageView.image = image.image
+        self.cardView.backgroundColor = image.primaryColor
+    }
+    
 }

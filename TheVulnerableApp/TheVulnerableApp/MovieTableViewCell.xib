@@ -20,7 +20,7 @@
                         <rect key="frame" x="24" y="107" width="311" height="197"/>
                         <color key="backgroundColor" red="0.0" green="0.34805327653884888" blue="0.43177717924118042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="test_image" translatesAutoresizingMaskIntoConstraints="NO" id="tRW-AD-ER0">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="avengers" translatesAutoresizingMaskIntoConstraints="NO" id="tRW-AD-ER0">
                         <rect key="frame" x="24" y="24" width="311" height="236"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-wk-oeD">
@@ -83,6 +83,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="test_image" width="959" height="763"/>
+        <image name="avengers" width="959" height="763"/>
     </resources>
 </document>
