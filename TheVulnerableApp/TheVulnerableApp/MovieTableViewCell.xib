@@ -18,50 +18,67 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEP-2d-ddn">
                         <rect key="frame" x="24" y="107" width="311" height="197"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_image" translatesAutoresizingMaskIntoConstraints="NO" id="tRW-AD-ER0">
-                                <rect key="frame" x="0.0" y="-83" width="311" height="280"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-bZ-KnO">
-                                <rect key="frame" x="0.0" y="138" width="311" height="59"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-wk-oeD">
-                                        <rect key="frame" x="8" y="14" width="217.5" height="30.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="cQS-wk-oeD" firstAttribute="centerY" secondItem="gfG-bZ-KnO" secondAttribute="centerY" id="dxM-uf-u4o"/>
-                                    <constraint firstItem="cQS-wk-oeD" firstAttribute="leading" secondItem="gfG-bZ-KnO" secondAttribute="leading" constant="8" id="fKw-DC-MbV"/>
-                                    <constraint firstItem="cQS-wk-oeD" firstAttribute="width" secondItem="gfG-bZ-KnO" secondAttribute="width" multiplier="0.7" id="tiI-fC-Ube"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.34805327653884888" blue="0.43177717924118042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="test_image" translatesAutoresizingMaskIntoConstraints="NO" id="tRW-AD-ER0">
+                        <rect key="frame" x="24" y="24" width="311" height="236"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-wk-oeD">
+                        <rect key="frame" x="40" y="252" width="197" height="44"/>
                         <constraints>
-                            <constraint firstItem="gfG-bZ-KnO" firstAttribute="leading" secondItem="ZEP-2d-ddn" secondAttribute="leading" id="62D-Wp-QAe"/>
-                            <constraint firstAttribute="bottom" secondItem="gfG-bZ-KnO" secondAttribute="bottom" id="EiJ-X1-AKm"/>
-                            <constraint firstAttribute="bottom" secondItem="tRW-AD-ER0" secondAttribute="bottom" id="nzm-9b-tUe"/>
-                            <constraint firstItem="tRW-AD-ER0" firstAttribute="centerX" secondItem="ZEP-2d-ddn" secondAttribute="centerX" id="pqW-i6-viG"/>
-                            <constraint firstItem="gfG-bZ-KnO" firstAttribute="height" secondItem="ZEP-2d-ddn" secondAttribute="height" multiplier="0.3" id="pvy-qI-uCm"/>
-                            <constraint firstAttribute="trailing" secondItem="gfG-bZ-KnO" secondAttribute="trailing" id="rXk-Eh-Tna"/>
-                            <constraint firstItem="tRW-AD-ER0" firstAttribute="width" secondItem="ZEP-2d-ddn" secondAttribute="width" id="tZ1-Uf-dWS"/>
+                            <constraint firstAttribute="height" constant="44" id="snO-UG-7sF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDz-Zu-gV4">
+                        <rect key="frame" x="253" y="221.5" width="66" height="66"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Prp-gN-Wnv">
+                                <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Prp-gN-Wnv" firstAttribute="height" secondItem="rDz-Zu-gV4" secondAttribute="height" constant="-16" id="1Km-SK-yyi"/>
+                            <constraint firstItem="Prp-gN-Wnv" firstAttribute="centerX" secondItem="rDz-Zu-gV4" secondAttribute="centerX" id="BSA-dH-Zy8"/>
+                            <constraint firstItem="Prp-gN-Wnv" firstAttribute="width" secondItem="rDz-Zu-gV4" secondAttribute="width" constant="-16" id="JED-jR-tEf"/>
+                            <constraint firstAttribute="width" constant="66" id="XC8-YJ-TsJ"/>
+                            <constraint firstItem="Prp-gN-Wnv" firstAttribute="centerY" secondItem="rDz-Zu-gV4" secondAttribute="centerY" id="dKG-kZ-B5w"/>
+                            <constraint firstAttribute="height" constant="66" id="t2d-gJ-elS"/>
                         </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="cQS-wk-oeD" firstAttribute="bottom" secondItem="ZEP-2d-ddn" secondAttribute="bottom" constant="-8" id="0TY-bC-gIk"/>
+                    <constraint firstItem="rDz-Zu-gV4" firstAttribute="trailing" secondItem="ZEP-2d-ddn" secondAttribute="trailing" constant="-16" id="1Z8-f3-juc"/>
+                    <constraint firstItem="cQS-wk-oeD" firstAttribute="leading" secondItem="ZEP-2d-ddn" secondAttribute="leading" constant="16" id="5fo-UI-wRl"/>
+                    <constraint firstItem="rDz-Zu-gV4" firstAttribute="leading" secondItem="cQS-wk-oeD" secondAttribute="trailing" constant="16" id="5lC-ef-CLG"/>
                     <constraint firstItem="ZEP-2d-ddn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="FyJ-4k-xuD"/>
-                    <constraint firstItem="tRW-AD-ER0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="GYn-sv-pbk"/>
                     <constraint firstAttribute="trailing" secondItem="ZEP-2d-ddn" secondAttribute="trailing" constant="24" id="N5X-VV-eP4"/>
                     <constraint firstAttribute="bottom" secondItem="ZEP-2d-ddn" secondAttribute="bottom" constant="24" id="NEI-Xn-KJR"/>
+                    <constraint firstItem="tRW-AD-ER0" firstAttribute="width" secondItem="ZEP-2d-ddn" secondAttribute="width" id="VYh-TF-PEa"/>
+                    <constraint firstItem="rDz-Zu-gV4" firstAttribute="bottom" secondItem="cQS-wk-oeD" secondAttribute="baseline" id="Whw-Xv-KCk"/>
                     <constraint firstItem="ZEP-2d-ddn" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.6" id="XT2-KK-jza"/>
+                    <constraint firstItem="tRW-AD-ER0" firstAttribute="bottom" secondItem="cQS-wk-oeD" secondAttribute="top" constant="8" id="eCp-ih-VkW"/>
+                    <constraint firstItem="tRW-AD-ER0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="wfe-fF-YBp"/>
+                    <constraint firstItem="tRW-AD-ER0" firstAttribute="centerX" secondItem="ZEP-2d-ddn" secondAttribute="centerX" id="ydd-Kb-QVJ"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cardView" destination="ZEP-2d-ddn" id="jt1-gY-vas"/>
+                <outlet property="movieImageView" destination="tRW-AD-ER0" id="SnZ-J2-ldo"/>
+                <outlet property="movieNameLabel" destination="cQS-wk-oeD" id="J3r-r6-1Pn"/>
+                <outlet property="scoreContainer" destination="rDz-Zu-gV4" id="PCR-V0-Whx"/>
+                <outlet property="scoreLabel" destination="Prp-gN-Wnv" id="aE8-E0-afl"/>
+            </connections>
             <point key="canvasLocation" x="165.94202898550725" y="223.66071428571428"/>
         </tableViewCell>
     </objects>

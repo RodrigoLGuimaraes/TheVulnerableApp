@@ -10,15 +10,24 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieNameLabel: UILabel!
+    @IBOutlet weak var scoreContainer: UIView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        cardView.layer.cornerRadius = 10
+        cardView.clipsToBounds = true
+        movieImageView.clipsToBounds = false
+        scoreContainer.layer.cornerRadius = 33
+        scoreContainer.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
