@@ -30,10 +30,10 @@ class MovieTableViewCell: UITableViewCell {
         let cardScale = CGFloat(highlighted ? 0.95 : 1)
         let imageScale = CGFloat(highlighted ? 1.1 : 1)
         
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
             self.cardView.transform = CGAffineTransform.init(scaleX: cardScale, y: cardScale)
             self.movieImageView.transform = CGAffineTransform.init(scaleX: imageScale, y: imageScale)
-        }
+        }, completion: nil)
     }
     
     func setRandomImage() {
