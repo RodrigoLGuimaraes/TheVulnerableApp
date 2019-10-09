@@ -25,9 +25,15 @@ class MovieTableViewCell: UITableViewCell {
         scoreContainer.layer.cornerRadius = 33
         scoreContainer.clipsToBounds = true
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        let cardScale = CGFloat(highlighted ? 0.95 : 1)
+        let imageScale = CGFloat(highlighted ? 1.1 : 1)
+        
+        UIView.animate(withDuration: 0.2) {
+            self.cardView.transform = CGAffineTransform.init(scaleX: cardScale, y: cardScale)
+            self.movieImageView.transform = CGAffineTransform.init(scaleX: imageScale, y: imageScale)
+        }
     }
     
     func setRandomImage() {
