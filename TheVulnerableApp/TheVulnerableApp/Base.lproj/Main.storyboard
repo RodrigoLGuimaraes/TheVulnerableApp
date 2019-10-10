@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="114"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="0oc-2O-OyO">
             <objects>
-                <viewController id="Ynk-QH-04O" sceneMemberID="viewController">
+                <viewController id="Ynk-QH-04O" customClass="DetailsViewController" customModule="TheVulnerableApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="82R-Mi-HYV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGF-GN-Ifs">
                                         <rect key="frame" x="48" y="565.5" width="318" height="35"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sh-lU-qug">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="1000" text="Movie name here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sh-lU-qug">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="35"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                                 <nil key="textColor"/>
@@ -90,13 +90,26 @@
                                             <constraint firstItem="7Sh-lU-qug" firstAttribute="leading" secondItem="zGF-GN-Ifs" secondAttribute="leading" id="js5-Mb-BMp"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-SW-neL">
+                                        <rect key="frame" x="142" y="656.5" width="130" height="129.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lfy-SW-neL" secondAttribute="height" multiplier="1:1" id="K30-Ar-t9T"/>
+                                        </constraints>
+                                        <state key="normal" image="play-button"/>
+                                        <connections>
+                                            <action selector="playMovie:" destination="Ynk-QH-04O" eventType="touchUpInside" id="JbD-er-SZz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="hCa-bB-diS" firstAttribute="top" secondItem="cCd-bE-Wlz" secondAttribute="top" id="9Bi-8n-n8U"/>
+                                    <constraint firstItem="lfy-SW-neL" firstAttribute="centerX" secondItem="cCd-bE-Wlz" secondAttribute="centerX" id="J76-cx-shm"/>
                                     <constraint firstItem="hCa-bB-diS" firstAttribute="centerX" secondItem="cCd-bE-Wlz" secondAttribute="centerX" id="MZ2-cT-sFr"/>
                                     <constraint firstAttribute="trailing" secondItem="zGF-GN-Ifs" secondAttribute="trailing" constant="48" id="dlR-0I-flX"/>
+                                    <constraint firstAttribute="bottom" secondItem="lfy-SW-neL" secondAttribute="bottom" constant="56" id="et4-O2-ML3"/>
                                     <constraint firstItem="zGF-GN-Ifs" firstAttribute="top" secondItem="hCa-bB-diS" secondAttribute="bottom" constant="-24" id="fdb-zn-Jgl"/>
+                                    <constraint firstItem="lfy-SW-neL" firstAttribute="top" secondItem="7Sh-lU-qug" secondAttribute="bottom" constant="56" id="jvg-ob-Hen"/>
                                     <constraint firstItem="hCa-bB-diS" firstAttribute="width" secondItem="cCd-bE-Wlz" secondAttribute="width" id="rk8-Pu-oDN"/>
                                     <constraint firstItem="zGF-GN-Ifs" firstAttribute="leading" secondItem="cCd-bE-Wlz" secondAttribute="leading" constant="48" id="x14-pk-PBQ"/>
                                     <constraint firstItem="hCa-bB-diS" firstAttribute="height" secondItem="cCd-bE-Wlz" secondAttribute="height" multiplier="0.7" id="xjO-2H-uU2"/>
@@ -113,14 +126,22 @@
                         <viewLayoutGuide key="safeArea" id="IRh-Gy-jfG"/>
                     </view>
                     <navigationItem key="navigationItem" id="2ZD-ph-HWe"/>
+                    <connections>
+                        <outlet property="coloredBackgroundView" destination="hCa-bB-diS" id="8KQ-gE-g4J"/>
+                        <outlet property="movieImageView" destination="JLD-LU-jzi" id="ZAV-0J-zIt"/>
+                        <outlet property="movieNameLabel" destination="7Sh-lU-qug" id="YmF-Dq-DnZ"/>
+                        <outlet property="movieNameLabelContainer" destination="zGF-GN-Ifs" id="abr-e9-PYT"/>
+                        <outlet property="playButton" destination="lfy-SW-neL" id="6aK-h0-5LJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMh-qy-mb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="117"/>
+            <point key="canvasLocation" x="1005.7971014492755" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="babyboss" width="803" height="997"/>
+        <image name="play-button" width="256" height="256"/>
         <image name="wavesbg" width="1080" height="1920"/>
     </resources>
 </document>
