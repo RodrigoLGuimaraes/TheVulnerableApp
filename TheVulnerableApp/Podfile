@@ -6,5 +6,5 @@ target 'TheVulnerableApp' do
   use_frameworks!
 
   # Pods for TheVulnerableApp
-
+  pod 'Moya'
 end
