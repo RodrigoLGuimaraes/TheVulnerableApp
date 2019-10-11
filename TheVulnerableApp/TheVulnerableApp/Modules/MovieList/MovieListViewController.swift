@@ -74,7 +74,14 @@ extension MovieListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as! MovieTableViewCell
         
         let movie = movies[indexPath.row]
+        
         cell.movieNameLabel.text = movie.title
+        cell.scoreLabel.text = String(format: "%.1f",
+                                      locale: Locale.current,
+                                      arguments: [movie.voteAverage]) + "%"
+        
+        cell.movieImageView.image = MovieImageProvider.shared.getRandomImage().image
+        
         if let posterPath = movie.posterPath,
             let url = URL(string: "\(Constants.imageBaseURL)\(posterPath)") {
             cell.movieImageView.set(url: url)

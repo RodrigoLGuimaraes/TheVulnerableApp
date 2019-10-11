@@ -43,4 +43,7 @@ class MovieTableViewCell: UITableViewCell {
         self.cardView.backgroundColor = image.primaryColor
     }
     
+    override func prepareForReuse() {
+        self.movieImageView?.image = nil
+    }
 }
