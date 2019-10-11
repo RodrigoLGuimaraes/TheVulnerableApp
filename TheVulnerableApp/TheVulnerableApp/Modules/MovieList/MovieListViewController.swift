@@ -76,9 +76,9 @@ extension MovieListViewController: UITableViewDataSource {
         let movie = movies[indexPath.row]
         
         cell.movieNameLabel.text = movie.title
-        cell.scoreLabel.text = String(format: "%.1f",
+        cell.scoreLabel.text = String(format: "%.0f",
                                       locale: Locale.current,
-                                      arguments: [movie.voteAverage]) + "%"
+                                      arguments: [movie.voteAverage * 10]) + "%"
         
         cell.movieImageView.image = MovieImageProvider.shared.getRandomImage().image
         
