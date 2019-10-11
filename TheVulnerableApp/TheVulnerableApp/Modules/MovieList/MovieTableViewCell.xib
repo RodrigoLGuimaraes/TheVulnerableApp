@@ -20,7 +20,7 @@
                         <rect key="frame" x="24" y="107" width="311" height="197"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-wk-oeD">
-                                <rect key="frame" x="16" y="145" width="175" height="44"/>
+                                <rect key="frame" x="16" y="145" width="205" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="snO-UG-7sF"/>
                                 </constraints>
@@ -53,18 +53,19 @@
                         <constraints>
                             <constraint firstItem="cQS-wk-oeD" firstAttribute="leading" secondItem="ZEP-2d-ddn" secondAttribute="leading" constant="16" id="2hO-wS-tM7"/>
                             <constraint firstItem="rDz-Zu-gV4" firstAttribute="bottom" secondItem="cQS-wk-oeD" secondAttribute="baseline" id="4gd-Ps-FSR"/>
+                            <constraint firstItem="rDz-Zu-gV4" firstAttribute="leading" secondItem="cQS-wk-oeD" secondAttribute="trailing" constant="8" id="YYP-I1-MjF"/>
                             <constraint firstAttribute="trailing" secondItem="rDz-Zu-gV4" secondAttribute="trailing" constant="16" id="jXs-er-rIu"/>
                             <constraint firstAttribute="bottom" secondItem="cQS-wk-oeD" secondAttribute="bottom" constant="8" id="z4z-1f-3z7"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="avengers" translatesAutoresizingMaskIntoConstraints="NO" id="tRW-AD-ER0">
-                        <rect key="frame" x="24" y="24" width="311" height="236"/>
+                        <rect key="frame" x="24" y="24" width="311" height="228"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="ZEP-2d-ddn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="FyJ-4k-xuD"/>
-                    <constraint firstItem="tRW-AD-ER0" firstAttribute="bottom" secondItem="cQS-wk-oeD" secondAttribute="top" constant="8" id="JYV-z3-DRV"/>
+                    <constraint firstItem="tRW-AD-ER0" firstAttribute="bottom" secondItem="cQS-wk-oeD" secondAttribute="top" id="JYV-z3-DRV"/>
                     <constraint firstAttribute="trailing" secondItem="ZEP-2d-ddn" secondAttribute="trailing" constant="24" id="N5X-VV-eP4"/>
                     <constraint firstAttribute="bottom" secondItem="ZEP-2d-ddn" secondAttribute="bottom" constant="24" id="NEI-Xn-KJR"/>
                     <constraint firstItem="tRW-AD-ER0" firstAttribute="width" secondItem="ZEP-2d-ddn" secondAttribute="width" id="VYh-TF-PEa"/>
