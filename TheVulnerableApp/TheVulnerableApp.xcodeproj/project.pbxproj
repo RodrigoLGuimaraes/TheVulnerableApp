@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		113699EE234D0C1600F8A890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113699ED234D0C1600F8A890 /* AppDelegate.swift */; };
 		113699F0234D0C1600F8A890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113699EF234D0C1600F8A890 /* SceneDelegate.swift */; };
-		113699F2234D0C1600F8A890 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113699F1234D0C1600F8A890 /* ViewController.swift */; };
+		113699F2234D0C1600F8A890 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113699F1234D0C1600F8A890 /* MovieListViewController.swift */; };
 		113699F5234D0C1600F8A890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113699F3234D0C1600F8A890 /* Main.storyboard */; };
 		113699F7234D0C1A00F8A890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113699F6234D0C1A00F8A890 /* Assets.xcassets */; };
 		113699FA234D0C1A00F8A890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113699F8234D0C1A00F8A890 /* LaunchScreen.storyboard */; };
+		87F65A4E2350048000CA2A80 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F65A4D2350048000CA2A80 /* MovieListPresenter.swift */; };
+		87F65A5023500BD900CA2A80 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F65A4F23500BD900CA2A80 /* UIImageView+Utils.swift */; };
 		9458EB28234FA87C004C66B1 /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458EB27234FA87C004C66B1 /* MovieRouter.swift */; };
 		9458EB2B234FAA56004C66B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458EB2A234FAA56004C66B1 /* Constants.swift */; };
 		9458EB2D234FAB54004C66B1 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458EB2C234FAB54004C66B1 /* MovieRepository.swift */; };
@@ -32,13 +34,15 @@
 		113699EA234D0C1600F8A890 /* TheVulnerableApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheVulnerableApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113699ED234D0C1600F8A890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		113699EF234D0C1600F8A890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		113699F1234D0C1600F8A890 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		113699F1234D0C1600F8A890 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		113699F4234D0C1600F8A890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		113699F6234D0C1A00F8A890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113699F9234D0C1A00F8A890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113699FB234D0C1A00F8A890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A3CB660F7C95D5943AF7E18 /* Pods-TheVulnerableApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVulnerableApp.debug.xcconfig"; path = "Target Support Files/Pods-TheVulnerableApp/Pods-TheVulnerableApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7E5336110F900CD482AE2317 /* Pods-TheVulnerableApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVulnerableApp.release.xcconfig"; path = "Target Support Files/Pods-TheVulnerableApp/Pods-TheVulnerableApp.release.xcconfig"; sourceTree = "<group>"; };
+		87F65A4D2350048000CA2A80 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
+		87F65A4F23500BD900CA2A80 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		9458EB27234FA87C004C66B1 /* MovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
 		9458EB2A234FAA56004C66B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9458EB2C234FAB54004C66B1 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 		113699EC234D0C1600F8A890 /* TheVulnerableApp */ = {
 			isa = PBXGroup;
 			children = (
+				87F65A4A2350043A00CA2A80 /* Modules */,
 				9458EB36234FB3F7004C66B1 /* Models */,
 				9458EB2E234FAB8F004C66B1 /* Repositories */,
 				9458EB29234FAA4C004C66B1 /* Constants */,
@@ -94,14 +99,10 @@
 				CE6023C0234D954700E3DBA5 /* Utils */,
 				113699ED234D0C1600F8A890 /* AppDelegate.swift */,
 				113699EF234D0C1600F8A890 /* SceneDelegate.swift */,
-				113699F1234D0C1600F8A890 /* ViewController.swift */,
 				113699F3234D0C1600F8A890 /* Main.storyboard */,
 				113699F6234D0C1A00F8A890 /* Assets.xcassets */,
 				113699F8234D0C1A00F8A890 /* LaunchScreen.storyboard */,
 				113699FB234D0C1A00F8A890 /* Info.plist */,
-				CE3A0FDD234D813E00569CC4 /* MovieTableViewCell.swift */,
-				CE3A0FDE234D813E00569CC4 /* MovieTableViewCell.xib */,
-				CE6023C5234ED34800E3DBA5 /* DetailsViewController.swift */,
 			);
 			path = TheVulnerableApp;
 			sourceTree = "<group>";
@@ -112,6 +113,34 @@
 				BED3F693E233915C011114EF /* Pods_TheVulnerableApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87F65A4A2350043A00CA2A80 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				87F65A4C2350046500CA2A80 /* MovieDetail */,
+				87F65A4B2350044000CA2A80 /* MovieList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		87F65A4B2350044000CA2A80 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				113699F1234D0C1600F8A890 /* MovieListViewController.swift */,
+				CE3A0FDD234D813E00569CC4 /* MovieTableViewCell.swift */,
+				CE3A0FDE234D813E00569CC4 /* MovieTableViewCell.xib */,
+				87F65A4D2350048000CA2A80 /* MovieListPresenter.swift */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		87F65A4C2350046500CA2A80 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CE6023C5234ED34800E3DBA5 /* DetailsViewController.swift */,
+			);
+			path = MovieDetail;
 			sourceTree = "<group>";
 		};
 		9458EB25234FA697004C66B1 /* Networking */ = {
@@ -179,6 +208,7 @@
 			children = (
 				CE6023C1234D955700E3DBA5 /* UIImageColors.swift */,
 				CE6023C3234D956F00E3DBA5 /* MovieImageProvider.swift */,
+				87F65A4F23500BD900CA2A80 /* UIImageView+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,13 +331,15 @@
 			files = (
 				9458EB38234FB3FE004C66B1 /* Movie.swift in Sources */,
 				9458EB33234FABD0004C66B1 /* MovieServiceImpl.swift in Sources */,
-				113699F2234D0C1600F8A890 /* ViewController.swift in Sources */,
+				113699F2234D0C1600F8A890 /* MovieListViewController.swift in Sources */,
 				9458EB28234FA87C004C66B1 /* MovieRouter.swift in Sources */,
+				87F65A4E2350048000CA2A80 /* MovieListPresenter.swift in Sources */,
 				CE6023C4234D956F00E3DBA5 /* MovieImageProvider.swift in Sources */,
 				113699EE234D0C1600F8A890 /* AppDelegate.swift in Sources */,
 				CE3A0FDF234D813E00569CC4 /* MovieTableViewCell.swift in Sources */,
 				CE6023C6234ED34800E3DBA5 /* DetailsViewController.swift in Sources */,
 				113699F0234D0C1600F8A890 /* SceneDelegate.swift in Sources */,
+				87F65A5023500BD900CA2A80 /* UIImageView+Utils.swift in Sources */,
 				CE6023C2234D955700E3DBA5 /* UIImageColors.swift in Sources */,
 				9458EB35234FB21A004C66B1 /* MovieRepositoryImpl.swift in Sources */,
 				9458EB2D234FAB54004C66B1 /* MovieRepository.swift in Sources */,

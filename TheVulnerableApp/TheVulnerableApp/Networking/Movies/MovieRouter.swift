@@ -20,8 +20,8 @@ extension MovieRouter: TargetType {
     
     var path: String {
         switch self {
-        case .search(let query):
-            return "/search/movie?api_key=\(Constants.apiKEY)&query=\(query)"
+        case .search:
+            return "/search/movie"
         }
     }
     
@@ -34,7 +34,13 @@ extension MovieRouter: TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case .search(let query):
+            return .requestCompositeData(bodyData: Data(),
+                                         urlParameters:
+                ["api_key" : Constants.apiKEY, "query" : query]
+            )
+        }
     }
     
     var headers: [String : String]? {

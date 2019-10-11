@@ -13,7 +13,7 @@ struct Movie: Codable {
     let id: Int
     let title: String
     let overview: String
-    let posterPath: String
+    let posterPath: String?
     
     private enum CodingKeys: String, CodingKey {
         case id

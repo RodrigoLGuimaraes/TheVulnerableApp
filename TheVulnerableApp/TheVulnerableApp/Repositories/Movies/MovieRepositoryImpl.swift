@@ -21,14 +21,24 @@ class MovieRepositoryImpl: MovieRepository {
     
     func search(query: String, completion: @escaping (Result<[Movie],Error>) -> Void) {
         service.search(query: query) { (result) in
-            if case .success(let response) = result,
-                let movies = try? response.map([Movie].self, atKeyPath: "results") {
-                completion(.success(movies))
+            
+            guard case .success(let response) = result else {
+                DispatchQueue.main.async {
+                    completion(.failure(MovieRequestError.notFound))
+                }
                 return
             }
             
-            completion(.failure(MovieRequestError.notFound))
-        
+            do {
+                let movies = try response.map([Movie].self, atKeyPath: "results")
+                
+                DispatchQueue.main.async {
+                    completion(.success(movies))
+                }
+            } catch let e {
+                completion(.failure(MovieRequestError.notFound))
+            }
+            
         }
     }
     
