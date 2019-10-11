@@ -80,7 +80,7 @@ extension MovieListViewController: UITableViewDataSource {
                                       locale: Locale.current,
                                       arguments: [movie.voteAverage * 10]) + "%"
         
-        cell.movieImageView.image = MovieImageProvider.shared.getRandomImage().image
+        cell.movieImageView.image = UIImage(named: "loadingCover")
         
         if let posterPath = movie.posterPath,
             let url = URL(string: "\(Constants.imageBaseURL)\(posterPath)") {
