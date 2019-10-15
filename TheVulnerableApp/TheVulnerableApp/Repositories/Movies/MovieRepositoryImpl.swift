@@ -35,7 +35,7 @@ class MovieRepositoryImpl: MovieRepository {
                 DispatchQueue.main.async {
                     completion(.success(movies))
                 }
-            } catch let e {
+            } catch {
                 completion(.failure(MovieRequestError.notFound))
             }
             
