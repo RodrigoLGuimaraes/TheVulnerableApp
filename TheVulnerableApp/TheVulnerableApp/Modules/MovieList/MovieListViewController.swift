@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieListViewController.swift
 //  TheVulnerableApp
 //
 //  Created by Rodrigo Longhi Guimarães on 08/10/19.
@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol MovieListView: AnyObject {
+    func didFetch(movies: [Movie])
+}
+
+class MovieListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     private var selectedIndex: IndexPath?
+    private var movies: [Movie] = []
+    private lazy var presenter = MovieListPresenter(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +29,8 @@ class ViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        presenter.fetchMovies()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,7 +50,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDelegate {
+extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 328
     }
@@ -53,21 +61,39 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension MovieListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as! MovieTableViewCell
         
-        cell.setRandomImage()
+        let movie = movies[indexPath.row]
+        
+        cell.movieNameLabel.text = movie.title
+        cell.scoreLabel.text = String(format: "%.0f",
+                                      locale: Locale.current,
+                                      arguments: [movie.voteAverage * 10]) + "%"
+        
+        cell.movieImageView.image = UIImage(named: "loadingCover")
+        
+        if let posterPath = movie.posterPath,
+            let url = URL(string: "\(Constants.imageBaseURL)\(posterPath)") {
+            cell.movieImageView.set(url: url)
+        }
         
         return cell
     }
 }
 
+extension MovieListViewController: MovieListView {
+    func didFetch(movies: [Movie]) {
+        self.movies = movies
+        self.tableView.reloadData()
+    }
+}

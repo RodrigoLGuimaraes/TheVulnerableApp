@@ -21,7 +21,7 @@ class MovieTableViewCell: UITableViewCell {
         
         cardView.layer.cornerRadius = 10
         cardView.clipsToBounds = true
-        movieImageView.clipsToBounds = false
+        
         scoreContainer.layer.cornerRadius = 33
         scoreContainer.clipsToBounds = true
     }
@@ -43,4 +43,7 @@ class MovieTableViewCell: UITableViewCell {
         self.cardView.backgroundColor = image.primaryColor
     }
     
+    override func prepareForReuse() {
+        self.movieImageView?.image = nil
+    }
 }
