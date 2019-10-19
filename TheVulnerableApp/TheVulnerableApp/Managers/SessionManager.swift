@@ -9,7 +9,12 @@
 import Foundation
 
 protocol SessionManager {
-    var guestSessionPersistenceKey: String { get }
-    var guestSession: GuestSession? { get set }
+    
+    var guestSessionIDPersistenceKey: String { get }
+    var guestSessionID: String? { get set }
+    
+    var guestSessionExpireDatePersistenceKey: String { get }
+    var guestSessionExpireDate: String? { get set }
+    
     func start()
 }

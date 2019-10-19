@@ -14,26 +14,27 @@ class SessionManagerImpl: SessionManager {
     private let defaults: UserDefaults
     private let repository: GuestSessionRepository
     
-    var guestSessionPersistenceKey: String = "guestSessionPersistenceKey"
+    var guestSessionIDPersistenceKey: String = "guestSessionIDPersistenceKey"
     
-    var guestSession: GuestSession? {
+    var guestSessionID: String? {
         get {
-            guard let sessionData = defaults.data(forKey: guestSessionPersistenceKey),
-                  let session = try? JSONDecoder().decode(GuestSession.self, from: sessionData)
-            else { return nil }
-            
-            return session
+            guard let sessionID = defaults.string(forKey: guestSessionIDPersistenceKey) else { return nil }
+            return sessionID
         }
-        
         set {
-            guard let session = newValue,
-                  let sessionData = try? JSONEncoder().encode(session)
-            else {
-                defaults.set(nil, forKey: guestSessionPersistenceKey)
-                return
-            }
-            
-            defaults.set(sessionData, forKey: guestSessionPersistenceKey)
+            defaults.set(newValue, forKey: guestSessionIDPersistenceKey)
+        }
+    }
+    
+    var guestSessionExpireDatePersistenceKey: String = "guestSessionExpireDatePersistenceKey"
+
+    var guestSessionExpireDate: String? {
+        get {
+            guard let sessionExpireDate = defaults.string(forKey: guestSessionExpireDatePersistenceKey) else { return nil }
+            return sessionExpireDate
+        }
+        set {
+            defaults.set(newValue, forKey: guestSessionExpireDatePersistenceKey)
         }
     }
     
@@ -44,8 +45,8 @@ class SessionManagerImpl: SessionManager {
     }
     
     func start() {
-        if let currentSession = self.guestSession,
-            let expireDate = currentSession.expiresAt.date(withFormat: expireDateFormat),
+        if let expireDateString = self.guestSessionExpireDate,
+            let expireDate = expireDateString.date(withFormat: expireDateFormat),
             isValidSession(expireDate: expireDate) {
             return
         }
@@ -59,7 +60,8 @@ class SessionManagerImpl: SessionManager {
                 return
             }
             
-            self.guestSession = session
+            self.guestSessionID = session.guestSessionId
+            self.guestSessionExpireDate = session.expiresAt
         }
     }
     
