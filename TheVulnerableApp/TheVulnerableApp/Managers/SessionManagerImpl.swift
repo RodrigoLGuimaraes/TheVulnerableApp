@@ -12,7 +12,7 @@ class SessionManagerImpl: SessionManager {
     
     private let expireDateFormat = "yyyy-MM-dd HH:mm:ss Z"
     private let defaults: UserDefaults
-    private let repository: GuestSessionRepository
+    private let sessionRepository: GuestSessionRepository
     
     var guestSessionIDPersistenceKey: String = "guestSessionIDPersistenceKey"
     
@@ -40,7 +40,7 @@ class SessionManagerImpl: SessionManager {
     
     init(repository: GuestSessionRepository = GuestSessionRepositoryImpl(),
          defaults: UserDefaults = .standard) {
-        self.repository = repository
+        self.sessionRepository = repository
         self.defaults = defaults
     }
     
@@ -55,7 +55,7 @@ class SessionManagerImpl: SessionManager {
     }
     
     private func requestNewSession() {
-        repository.new { (result) in
+        sessionRepository.new { (result) in
             guard case .success(let session) = result else {
                 return
             }
