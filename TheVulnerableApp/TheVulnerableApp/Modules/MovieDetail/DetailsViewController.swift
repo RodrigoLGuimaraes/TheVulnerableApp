@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import STRatingControl
 
 class DetailsViewController: UIViewController {
     
@@ -14,17 +15,28 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieNameLabelContainer: UIView!
     @IBOutlet weak var movieNameLabel: UILabel!
-    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var ratingControll: STRatingControl!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    var movieID: Int?
+    private lazy var presenter = DetailsPresenter(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.movieNameLabelContainer.clipsToBounds = true
         self.movieNameLabelContainer.layer.cornerRadius = 5
+        
+        ratingControll.delegate = self
     }
     
-    @IBAction func playMovie(_ sender: Any) {
-        
+}
+
+extension DetailsViewController: STRatingControlDelegate {
+    
+    func didSelectRating(_ control: STRatingControl, rating: Int) {
+        guard let movieID = movieID else { return }
+        presenter.rate(movieID: movieID, value: rating)
     }
     
 }

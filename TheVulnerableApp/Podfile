@@ -8,4 +8,5 @@ target 'TheVulnerableApp' do
   # Pods for TheVulnerableApp
   pod 'Moya'
   pod 'SwiftKeychainWrapper'
+  pod 'STRatingControl'
 end
