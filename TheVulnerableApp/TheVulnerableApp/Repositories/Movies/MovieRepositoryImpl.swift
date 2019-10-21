@@ -10,9 +10,11 @@ import Foundation
 
 enum MovieRequestError: Error {
     case notFound
+    case couldNotRate
 }
 
 class MovieRepositoryImpl: MovieRepository {
+    
     private let service: MovieService
     
     init(service: MovieService = MovieServiceImpl()) {
@@ -42,5 +44,17 @@ class MovieRepositoryImpl: MovieRepository {
         }
     }
     
+    func rate(movieID: Int, value: Double, completion: @escaping (Result<Void, Error>) -> Void) {
+        service.rate(movieID: movieID, value: value) { result in
+            guard case .success = result else {
+                DispatchQueue.main.async {
+                    completion(.failure(MovieRequestError.couldNotRate))
+                }
+                return
+            }
+            
+            completion(.success(()))
+        }
+    }
     
 }

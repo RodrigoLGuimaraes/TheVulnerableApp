@@ -41,10 +41,9 @@ class MovieListViewController: UIViewController {
             let _ = vc.view
             vc.coloredBackgroundView.backgroundColor = cell.cardView.backgroundColor
             vc.movieImageView.image = cell.movieImageView.image
-            vc.movieNameLabel.text = cell.movieNameLabel.text
-            vc.playButton.setImage(vc.playButton.imageView?.image?.withRenderingMode(.alwaysTemplate), for: .normal)
-            vc.playButton.setImage(vc.playButton.imageView?.image?.withRenderingMode(.alwaysTemplate), for: .selected)
-            vc.playButton.imageView?.tintColor = cell.cardView.backgroundColor
+            vc.movieNameLabel.text = cell.movie?.title
+            vc.descriptionTextView.text = cell.movie?.overview
+            vc.movieID = cell.movie?.id
         }
     }
 
@@ -74,19 +73,7 @@ extension MovieListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as! MovieTableViewCell
         
         let movie = movies[indexPath.row]
-        
-        cell.movieNameLabel.text = movie.title
-        cell.scoreLabel.text = String(format: "%.0f",
-                                      locale: Locale.current,
-                                      arguments: [movie.voteAverage * 10]) + "%"
-        
-        cell.movieImageView.image = UIImage(named: "loadingCover")
-        
-        if let posterPath = movie.posterPath,
-            let url = URL(string: "\(Constants.imageBaseURL)\(posterPath)") {
-            cell.movieImageView.set(url: url)
-        }
-        
+        cell.setup(with: movie)
         return cell
     }
 }

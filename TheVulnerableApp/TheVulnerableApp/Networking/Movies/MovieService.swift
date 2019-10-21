@@ -12,4 +12,6 @@ import Moya
 protocol MovieService {
     @discardableResult
     func search(query: String, completion: @escaping Completion) -> Cancellable
+    @discardableResult
+    func rate(movieID: Int, value: Double, completion: @escaping Completion) -> Cancellable
 }

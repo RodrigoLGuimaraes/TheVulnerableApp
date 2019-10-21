@@ -10,4 +10,5 @@ import Moya
 
 protocol MovieRepository {
     func search(query: String, completion: @escaping (Result<[Movie],Error>) -> Void)
+    func rate(movieID: Int, value: Double, completion: @escaping (Result<Void,Error>) -> Void)
 }

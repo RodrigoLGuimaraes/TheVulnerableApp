@@ -15,6 +15,7 @@
 		113699FA234D0C1A00F8A890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113699F8234D0C1A00F8A890 /* LaunchScreen.storyboard */; };
 		87F65A4E2350048000CA2A80 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F65A4D2350048000CA2A80 /* MovieListPresenter.swift */; };
 		87F65A5023500BD900CA2A80 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F65A4F23500BD900CA2A80 /* UIImageView+Utils.swift */; };
+		942CA2A0235E14DA00E72AE6 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA29F235E14DA00E72AE6 /* DetailsPresenter.swift */; };
 		94447A00235607D4004D4FAF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944479FF235607D4004D4FAF /* SessionManager.swift */; };
 		94447A02235607EC004D4FAF /* SessionManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94447A01235607EC004D4FAF /* SessionManagerImpl.swift */; };
 		94447A0523560821004D4FAF /* GuestSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94447A0423560821004D4FAF /* GuestSessionRepository.swift */; };
@@ -52,6 +53,7 @@
 		7E5336110F900CD482AE2317 /* Pods-TheVulnerableApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVulnerableApp.release.xcconfig"; path = "Target Support Files/Pods-TheVulnerableApp/Pods-TheVulnerableApp.release.xcconfig"; sourceTree = "<group>"; };
 		87F65A4D2350048000CA2A80 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		87F65A4F23500BD900CA2A80 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		942CA29F235E14DA00E72AE6 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		944479FF235607D4004D4FAF /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		94447A01235607EC004D4FAF /* SessionManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerImpl.swift; sourceTree = "<group>"; };
 		94447A0423560821004D4FAF /* GuestSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSessionRepository.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6023C5234ED34800E3DBA5 /* DetailsViewController.swift */,
+				942CA29F235E14DA00E72AE6 /* DetailsPresenter.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				94447A02235607EC004D4FAF /* SessionManagerImpl.swift in Sources */,
 				113699EE234D0C1600F8A890 /* AppDelegate.swift in Sources */,
 				CE3A0FDF234D813E00569CC4 /* MovieTableViewCell.swift in Sources */,
+				942CA2A0235E14DA00E72AE6 /* DetailsPresenter.swift in Sources */,
 				CE6023C6234ED34800E3DBA5 /* DetailsViewController.swift in Sources */,
 				94C9924923564152004A0997 /* String+Date.swift in Sources */,
 				94447A0C235609D1004D4FAF /* GuestSessionRouter.swift in Sources */,

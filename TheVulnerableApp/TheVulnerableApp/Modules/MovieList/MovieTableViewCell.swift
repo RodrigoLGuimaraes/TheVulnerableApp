@@ -16,6 +16,8 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var scoreContainer: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    var movie: Movie?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -34,6 +36,22 @@ class MovieTableViewCell: UITableViewCell {
             self.cardView.transform = CGAffineTransform.init(scaleX: cardScale, y: cardScale)
             self.movieImageView.transform = CGAffineTransform.init(scaleX: imageScale, y: imageScale)
         }, completion: nil)
+    }
+    
+    func setup(with movie: Movie) {
+        self.movie = movie
+        
+        self.movieNameLabel.text = movie.title
+        self.scoreLabel.text = String(format: "%.0f",
+                                      locale: Locale.current,
+                                      arguments: [movie.voteAverage * 10]) + "%"
+        
+        self.movieImageView.image = UIImage(named: "loadingCover")
+        
+        if let posterPath = movie.posterPath,
+            let url = URL(string: "\(Constants.imageBaseURL)\(posterPath)") {
+            self.movieImageView.set(url: url)
+        }
     }
     
     func setRandomImage() {

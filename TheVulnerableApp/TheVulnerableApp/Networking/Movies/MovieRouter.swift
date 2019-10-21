@@ -10,9 +10,15 @@ import Moya
 
 enum MovieRouter {
     case search(query: String)
+    case rate(movieID: Int, value: Double)
 }
 
 extension MovieRouter: TargetType {
+    
+    var guestSessionID: String? {
+        let sessionManager = SessionManagerImpl()
+        return sessionManager.guestSessionID
+    }
     
     var baseURL: URL {
         return URL(string: Constants.baseURL)!
@@ -22,11 +28,18 @@ extension MovieRouter: TargetType {
         switch self {
         case .search:
             return "/search/movie"
+        case .rate(let movieID, _):
+            return "/movie/\(movieID)/rating"
         }
     }
     
     var method: Method {
-        return .get
+        switch self {
+        case .search:
+            return .get
+        default:
+            return .post
+        }
     }
     
     var sampleData: Data {
@@ -40,6 +53,19 @@ extension MovieRouter: TargetType {
                                          urlParameters:
                 ["api_key" : Constants.apiKEY, "query" : query]
             )
+        case .rate(_, let value):            
+            if let sessionID = self.guestSessionID {
+                
+                return .requestCompositeParameters(bodyParameters: ["value": value],
+                                                   bodyEncoding: JSONEncoding.default,
+                                                   urlParameters: ["api_key":Constants.apiKEY,
+                                                                   "guest_session_id": sessionID])
+                
+            } else {
+                return .requestCompositeParameters(bodyParameters: ["value": value],
+                                                   bodyEncoding: JSONEncoding.default,
+                                                   urlParameters: ["api_key":Constants.apiKEY])
+            }
         }
     }
     

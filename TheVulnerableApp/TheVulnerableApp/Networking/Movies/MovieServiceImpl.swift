@@ -21,4 +21,8 @@ class MovieServiceImpl: MovieService {
     func search(query: String, completion: @escaping Completion) -> Cancellable {
         return provider.request(.search(query: query), completion: completion)
     }
+    
+    func rate(movieID: Int, value: Double, completion: @escaping Completion) -> Cancellable {
+        return provider.request(.rate(movieID: movieID, value: value), completion: completion)
+    }
 }
