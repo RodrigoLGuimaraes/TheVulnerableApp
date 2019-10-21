@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import SwiftKeychainWrapper
 
 class SessionManagerImpl: SessionManager {
     
     private let expireDateFormat = "yyyy-MM-dd HH:mm:ss Z"
+    private let keychainWrapper: KeychainWrapper
     private let defaults: UserDefaults
     private let sessionRepository: GuestSessionRepository
     
@@ -18,11 +20,15 @@ class SessionManagerImpl: SessionManager {
     
     var guestSessionID: String? {
         get {
-            guard let sessionID = defaults.string(forKey: guestSessionIDPersistenceKey) else { return nil }
+            guard let sessionID = keychainWrapper.string(forKey: guestSessionIDPersistenceKey) else { return nil }
             return sessionID
         }
         set {
-            defaults.set(newValue, forKey: guestSessionIDPersistenceKey)
+            guard let newValue = newValue else {
+                keychainWrapper.removeObject(forKey: guestSessionIDPersistenceKey)
+                return
+            }
+            keychainWrapper.set(newValue, forKey: guestSessionIDPersistenceKey)
         }
     }
     
@@ -39,8 +45,10 @@ class SessionManagerImpl: SessionManager {
     }
     
     init(repository: GuestSessionRepository = GuestSessionRepositoryImpl(),
+         keychainWrapper: KeychainWrapper = KeychainWrapper.standard,
          defaults: UserDefaults = .standard) {
         self.sessionRepository = repository
+        self.keychainWrapper = keychainWrapper
         self.defaults = defaults
     }
     
