@@ -8,3 +8,11 @@ target 'TheVulnerableApp' do
   # Pods for TheVulnerableApp
   pod 'Moya'
 end
+
+plugin 'cocoapods-keys', {
+  :project => "TheVulnerableApp",
+  :target => "TheVulnerableApp",
+  :keys => [
+    "apiKEY"
+  ]
+}

@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import Keys
 
 struct Constants {
     
+    static let keys = TheVulnerableAppKeys()
+    
     static let baseURL: String = "http://api.themoviedb.org/3"
     static let imageBaseURL: String = "http://image.tmdb.org/t/p/w500"
-    static let apiKEY: String = "cf296eca3abd998c51729f5793bc0cd3"
+    static let apiKEY: String =  keys.apiKEY
     
 }
