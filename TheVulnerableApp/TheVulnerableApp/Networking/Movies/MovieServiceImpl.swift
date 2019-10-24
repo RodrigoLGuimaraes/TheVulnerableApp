@@ -13,7 +13,7 @@ class MovieServiceImpl: MovieService {
     
     private let provider: MoyaProvider<MovieRouter>
     
-    init(provider: MoyaProvider<MovieRouter> = MoyaProvider<MovieRouter>()) {
+    init(provider: MoyaProvider<MovieRouter> = MoyaProvider<MovieRouter>(manager: AlamofireSessionManagerBuilder().build())) {
         self.provider = provider
     }
     

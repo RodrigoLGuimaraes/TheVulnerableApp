@@ -14,6 +14,7 @@
 		113699F7234D0C1A00F8A890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113699F6234D0C1A00F8A890 /* Assets.xcassets */; };
 		113699FA234D0C1A00F8A890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113699F8234D0C1A00F8A890 /* LaunchScreen.storyboard */; };
 		11A41E5F236252A600C093C4 /* themoviedb.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = 11A41E5E236252A600C093C4 /* themoviedb.org.cer */; };
+		11A41E612362563400C093C4 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A41E602362563400C093C4 /* AlamofireManager.swift */; };
 		87F65A4E2350048000CA2A80 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F65A4D2350048000CA2A80 /* MovieListPresenter.swift */; };
 		87F65A5023500BD900CA2A80 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F65A4F23500BD900CA2A80 /* UIImageView+Utils.swift */; };
 		94447A00235607D4004D4FAF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944479FF235607D4004D4FAF /* SessionManager.swift */; };
@@ -50,6 +51,7 @@
 		113699F9234D0C1A00F8A890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113699FB234D0C1A00F8A890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11A41E5E236252A600C093C4 /* themoviedb.org.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = themoviedb.org.cer; sourceTree = "<group>"; };
+		11A41E602362563400C093C4 /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		1A3CB660F7C95D5943AF7E18 /* Pods-TheVulnerableApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVulnerableApp.debug.xcconfig"; path = "Target Support Files/Pods-TheVulnerableApp/Pods-TheVulnerableApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7E5336110F900CD482AE2317 /* Pods-TheVulnerableApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVulnerableApp.release.xcconfig"; path = "Target Support Files/Pods-TheVulnerableApp/Pods-TheVulnerableApp.release.xcconfig"; sourceTree = "<group>"; };
 		87F65A4D2350048000CA2A80 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				944479FF235607D4004D4FAF /* SessionManager.swift */,
 				94447A01235607EC004D4FAF /* SessionManagerImpl.swift */,
+				11A41E602362563400C093C4 /* AlamofireManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				113699F0234D0C1600F8A890 /* SceneDelegate.swift in Sources */,
 				87F65A5023500BD900CA2A80 /* UIImageView+Utils.swift in Sources */,
 				CE6023C2234D955700E3DBA5 /* UIImageColors.swift in Sources */,
+				11A41E612362563400C093C4 /* AlamofireManager.swift in Sources */,
 				94447A1023560AED004D4FAF /* GuestSessionServiceImpl.swift in Sources */,
 				9458EB35234FB21A004C66B1 /* MovieRepositoryImpl.swift in Sources */,
 				94447A072356082B004D4FAF /* GuestSessionRepositoryImpl.swift in Sources */,

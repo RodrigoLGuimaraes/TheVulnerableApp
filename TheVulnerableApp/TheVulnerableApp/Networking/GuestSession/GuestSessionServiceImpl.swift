@@ -12,7 +12,7 @@ class GuestSessionServiceImpl: GuestSessionService {
     
     let provider: MoyaProvider<GuestSessionRouter>
     
-    init(provider: MoyaProvider<GuestSessionRouter> = MoyaProvider<GuestSessionRouter>()) {
+    init(provider: MoyaProvider<GuestSessionRouter> = MoyaProvider<GuestSessionRouter>(manager: AlamofireSessionManagerBuilder().build())) {
         self.provider = provider
     }
     
